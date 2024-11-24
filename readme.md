@@ -5,8 +5,10 @@ https://drive.google.com/file/d/14YaGtsz_A0bm3XvBvKBsGP3X4CXtLlpK/view?usp=shari
 2. Download and move to ./widerface_evaluate directory
 https://drive.google.com/drive/folders/1bK5u4MWsgpmeJN7Jdom9PXiN0nASfI3o?usp=sharing  
 
-## run server AI
+## Install docker container toolkit
+https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html 
 
+## run server AI
 ```
 docker run --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
 docker run --rm --gpus all --network host -it -w /home -v $(pwd):/home --name msh phamvandan/torchenv:latest
