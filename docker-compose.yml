@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  torchenv:
+    image: phamvandan/torchenv_v2:latest
+    container_name: msh
+    working_dir: /home
+    volumes:
+      - .:/home
+    command: python3 main_app.py
+    runtime: nvidia
+    ports:
+      - "9500:9500"
+    restart: always
+
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    restart: always
