@@ -65,11 +65,11 @@ if __name__ == "__main__":
     # call_infer(model_type="yolos")
 
     # ---TRAIN WITH 3 TYPE OF MODEL, YOU CAN CHANGE FLEXIBLE---
-    call_training(train_id="123", model_type="yolos", data_type="lfwd")
+    # call_training(train_id="123", model_type="yolos", data_type="lfwd")
     # call_training(train_id="123", model_type="yolon", data_type="wild01")
     # call_training(train_id="123", model_type="yolon5", data_type="face_mask")
     
     # ---TEST WITH 3 TYPE OF MODEL, YOU CAN CHANGE FLEXIBLE---
-    # call_testing(model_type="yolos", data_type="wild01")
+    call_testing(model_type="yolos", data_type="wild01")
     # call_testing(model_type="yolon", data_type="lfwd")
     # call_testing(model_type="yolon5", data_type="face_mask")

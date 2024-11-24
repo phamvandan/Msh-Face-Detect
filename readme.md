@@ -10,9 +10,7 @@ https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install
 
 ## run server AI
 ```
-docker run --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
-docker run --rm --gpus all --network host -it -w /home -v $(pwd):/home --name msh phamvandan/torchenv:latest
-python3 main_app.py
+docker compose up
 ```
 
 ## run client to train, test, inference

@@ -3,7 +3,7 @@ from threading import Thread
 
 # Establish a connection to RabbitMQ server
 def send(message='Hello, World!', queue_name='hello'):
-    connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+    connection = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq'))
     channel = connection.channel()
 
     # Declare a queue

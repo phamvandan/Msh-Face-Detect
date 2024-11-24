@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   torchenv:
-    image: phamvandan/torchenv_v2:latest
+    image: phamvandan/torchenv:latest
     container_name: msh
     working_dir: /home
     volumes:
@@ -12,6 +12,8 @@ services:
     ports:
       - "9500:9500"
     restart: always
+    networks:
+      - my_network
 
   rabbitmq:
     image: rabbitmq:management
@@ -20,3 +22,9 @@ services:
       - "5672:5672"
       - "15672:15672"
     restart: always
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
